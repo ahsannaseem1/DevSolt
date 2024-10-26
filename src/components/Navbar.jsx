@@ -3,6 +3,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
@@ -44,46 +45,56 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full justify-between bg-opacity-70 backdrop-blur-lg z-50" id="navbar">
-      <div className="flex text-white justify-between items-center px-12 h-16">
-        <a href="/" className="font-bold text-2xl">&lt;Ahsan /&gt;</a>
+    <div className="fixed top-0 left-0 w-full justify-between backdrop-blur-xl z-50 bg-opacity-70" id="navbar">
+      <div className="flex text-white justify-center items-center px-12 h-16">
+        {/* <a href="/" className="font-bold text-3xl">DevSolt</a> */}
 
-        <ul className="hidden md:flex gap-12 z-10 font-light text-lg">
-          <li className="h-full transition-transform transform hover:scale-110 w-full mx-4 cursor-pointer">
+        <ul className="hidden md:flex gap-10 z-10 font-normal text-lg">
+          <li className="h-full transition-transform duration-200 ease-out transform hover:scale-110 w-20 cursor-pointer hover:font-semibold">
             <Link to="skills" smooth={true} offset={50} duration={500}>
+              Home
+            </Link>
+          </li>
+          <li className="h-full transition-transform transform duration-200 ease-out hover:scale-110 w-20 cursor-pointer hover:font-semibold">
+            <Link to="portfolio" smooth={true} offset={50} duration={500}>
               About
             </Link>
           </li>
-          <li className="h-full transition-transform transform hover:scale-110 w-full mx-4 cursor-pointer">
-            <Link to="portfolio" smooth={true} offset={50} duration={500}>
-              Portfolio
+          <li className="h-full transition-transform transform duration-200 ease-out hover:scale-110 w-20 cursor-pointer hover:font-semibold">
+            <Link to="contact" smooth={true} offset={50} duration={500}>
+              Services
             </Link>
           </li>
-          <li className="h-full transition-transform transform hover:scale-110 w-full mx-4 cursor-pointer">
+          <li className="h-full transition-transform transform duration-200 ease-out hover:scale-110 w-20 cursor-pointer hover:font-semibold">
             <Link to="contact" smooth={true} offset={50} duration={500}>
               Contact
             </Link>
           </li>
         </ul>
 
-        <div onClick={toggleNav} className="md:hidden z-50 text-white">
+        <div onClick={toggleNav} className="md:hidden absolute right-5 z-50 text-white">
           {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
         </div>
         <motion.div
           initial={false}
           animate={nav ? "open" : "closed"}
           variants={menuVariants}
-          className="fixed right-0 top-0 secondary-color z-40 w-1/2 h-screen"
+          className="fixed bg-black top-0 z-40 w-full h-screen"
         >
           <ul className="font-semibold text-xl space-y-8 mt-24 text-center text-white">
             <li className="cursor-pointer">
               <Link to="skills" onClick={closeNav} smooth={true} offset={50} duration={500}>
+                Home
+              </Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to="portfolio" onClick={closeNav} smooth={true} offset={50} duration={500}>
                 About
               </Link>
             </li>
             <li className="cursor-pointer">
               <Link to="portfolio" onClick={closeNav} smooth={true} offset={50} duration={500}>
-                Portfolio
+                Services
               </Link>
             </li>
             <li className="cursor-pointer">
