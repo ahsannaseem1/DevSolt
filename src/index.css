@@ -30,14 +30,14 @@ body {
   
 }
 span {
-  @apply text-blue-700;
+  @apply text-blue-600;
 }
 h2 {
   @apply text-xl md:text-4xl;
 }
 p {
-  @apply text-xl tracking-tight leading-relaxed;
+  @apply text-xl tracking-tight;
 }
 .bg-primary-color{
-  @apply bg-blue-700
+  @apply bg-blue-600
 }

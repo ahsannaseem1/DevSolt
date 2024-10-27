@@ -1,100 +1,73 @@
 import React from "react";
-import smarthrm from "../assets/smarthrm1.jpg";
-import vlcdaycare from "../assets/vlcdaycare1.png";
-import londontownusa from "../assets/londontown.png";
-import qurankareem from "../assets/quran-kareem1.png";
-import { AiFillGithub } from "react-icons/ai";
+import webdev from "../assets/web-development.jpg";
+
 import Reveal from "./Reveal";
 
 const projects = [
   {
-    img: smarthrm,
-    title: "Project #1",
+    img: webdev,
+    title: "Web Development",
     description:
-      "Developed the frontend of my final year project using React Js and Tailwind CSS.",
-    links: {
-      site: "#",
-      github: "#",
-    },
+      "Our team builds responsive, high-performance websites using a range of technologies, including React.js, Tailwind CSS, and the full MERN stack (MongoDB, Express.js, React, Node.js). We focus on creating fast, intuitive web experiences that are optimized for scalability and cross-device compatibility.",
   },
   {
-    img: vlcdaycare,
-    title: "Project #2",
+    img: webdev,
+    title: "App Development",
     description:
-      "Developed the landing page for a day care and montessari club website using HTML, CSS & JavaScript.",
-    links: {
-      site: "https://vlcdaycare.netlify.app",
-      github: "https://github.com/ahsannaseem1/VLC-Day-Care-Website",
-    },
+      "We develop mobile applications tailored to your needs, using technologies like React Native for cross-platform compatibility, and Flutter for seamless Android and iOS experiences. Our apps are designed to be user-centric, prioritizing functionality and ease of use.",
   },
   {
-    img: londontownusa,
-    title: "Project #3",
+    img: webdev,
+    title: "UI/UX Design",
     description:
-      "Developed the home page of an e-commerce website using HTML, CSS & JavaScript.",
-    links: {
-      site: "https://londontown.netlify.app",
-      github: "#",
-    },
+      "Our designers use Figma and Adobe XD to craft visually engaging, user-friendly interfaces. With a focus on intuitive design principles, we ensure that each project offers an exceptional user experience, balancing aesthetics with seamless navigation.",
   },
   {
-    img: qurankareem,
-    title: "Project #4",
+    img: webdev,
+    title: "E-Commerce Websites",
     description:
-      "Developed a single page website that displays verses from Quran using HTML, CSS & JavaScript.",
-    links: {
-      site: "https://quraan-kareem.netlify.app",
-      github: "https://github.com/ahsannaseem1/Quran-Kareem",
-    },
+      "We create e-commerce platforms that drive conversions, utilizing Shopify for streamlined storefronts and the MERN stack for fully customizable solutions. Our e-commerce sites are optimized for performance, security, and scalability, with integration options for a range of payment and inventory management systems.",
   },
+  {
+    img: webdev,
+    title: "Digital Marketing",
+    description:
+      "Our digital marketing team leverages a comprehensive approach to grow your online presence. We specialize in SEO optimization, social media strategy, content marketing, and targeted advertising across platforms like Google, Facebook, and Instagram. Our strategies are designed to increase brand visibility, drive targeted traffic, and enhance engagement, all while focusing on delivering measurable results and a high ROI.",
+  },
+  
 ];
 
 const Portfolio = () => {
   return (
-    <div className="max-w-[1000px] mx-auto p-6 md:my-20" id="portfolio">
-      <h2 className="text-3xl font-bold text-center text-gray-200 mb-8">Portfolio</h2>
-      {projects.map((project, index) => (
+    <div className="w-full px-10" id="portfolio">
+      <div className="w-full max-w-[1300px] mx-auto">
+        {/* <h2 className="text-3xl font-bold text-center text-gray-200 mb-8">Services</h2> */}
         <Reveal>
+        {projects.map((project, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row ${
-              index % 2 !== 0 ? "md:flex-row-reverse" : ""
-            } mb-12 `}
+            className={`flex flex-col md:flex-row ${index % 2 !== 0 ? "md:flex-row-reverse" : ""
+              } mb-12 `}
           >
-            <div className="w-full md:w-1/2 p-4">
+            <div className="w-full md:w-1/2 mx-auto">
               <img
                 src={project.img}
                 alt={project.title}
-                className="w-full h-full border border-gray-600 object-cover rounded-lg shadow-lg"
+                className="w-full max-h-[550px] max-w-[550px] mx-auto object-cover rounded-3xl shadow-lg"
                 loading="lazy"
               />
             </div>
 
-            <div className="w-full md:w-1/2 p-4 flex flex-col justify-center ">
-              <h3 className="text-2xl font-semibold text-gray-200 mb-4">
+            <div className="w-full md:w-1/2 p-4 flex flex-col md:justify-center">
+              <h3 className="md:text-3xl text-3xl text-center md:text-left font-semibold text-gray-200 mb-4">
                 {project.title}
               </h3>
-              <p className="text-gray-300 mb-4">{project.description}</p>
-              <div className="flex space-x-4 ">
-                <a
-                  href={project.links.site}
-                  className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700 transition duration-300"
-                  target="blank"
-                >
-                  View Site
-                </a>
-                <a
-                  href={project.links.github}
-                  className="flex gap-2 px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700 transition duration-300 items-center"
-                  target="blank"
-                >
-                  <AiFillGithub /> Github
-                </a>
-              </div>
+              <p className="text-gray-300 mb-4 text-left tracking-tight text-lg">{project.description}</p>
             </div>
           </div>
+        ))}
         </Reveal>
-      ))}
+      </div>
     </div>
   );
 };

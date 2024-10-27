@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className='max-w-[1000px] mx-auto flex justify-center items-center p-6 text-sm md:text-lg mt-12'>
         <div className='space-y-4'>
-            <h3 className='text-4xl text-gray-200 font-semibold text-center'>DevSolt</h3>
+            <h3 className='text-3xl text-gray-200 font-semibold text-center'>DevSolt</h3>
             <div className='flex flex-row gap-2 text-gray-400 text-2xl items-center justify-center' >
                 {/* <a href="https://github.com/ahsannaseem1" target='blank' className='hover:scale-150 transition-transform'><FaGithub/></a> */}
                 {/* <a href="https://www.instagram.com/ahsanzart" target='blank' className='hover:scale-150 transition-transform'><FaInstagram/></a> */}

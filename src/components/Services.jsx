@@ -11,7 +11,7 @@ const Services = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.5} 
+      { threshold: 0.5 } 
     );
     if (servicesRef.current) {
       observer.observe(servicesRef.current);
@@ -25,45 +25,61 @@ const Services = () => {
       className="w-full mx-auto flex flex-col items-center justify-center px-4 text-gray-200 pb-8 py-4 md:py-12"
       id="services"
     >
-      <div className="flex w-full items-center gap-10 md:gap-24 justify-center">
+      {/* Icons */}
+      <div className="flex w-1/3 md:w-full max-w-[1300px] items-center gap-10 md:gap-24 justify-center">
         <span
-          className={`text-4xl md:text-7xl transition-transform duration-1000 delay-100 ease-out ${
-            isVisible ? "translate-x-0 opacity-100" : "-translate-x-28 opacity-20"
+          className={`text-3xl sm:text-4xl md:text-7xl transition-transform duration-1000 delay-100 ease-out ${
+            isVisible ? "translate-x-0 opacity-100" : "lg:-translate-x-24 -translate-x-8 opacity-20"
           }`}
         >
           <FaReact className="text-white" />
         </span>
         <span
-          className={`text-4xl md:text-7xl transition-transform duration-1000 delay-100 ease-out ${
-            isVisible ? "translate-x-0 opacity-100" : "-translate-x-28 opacity-20"
+          className={`text-3xl sm:text-4xl md:text-7xl transition-transform duration-1000 delay-100 ease-out ${
+            isVisible ? "translate-x-0 opacity-100" : "lg:-translate-x-24 -translate-x-8 opacity-20"
           }`}
         >
           <FaShopify className="text-white" />
         </span>
         <span
-          className={`text-4xl md:text-7xl transition-transform duration-1000 delay-100 ease-out ${
-            isVisible ? "translate-x-0 opacity-100" : "translate-y-28 opacity-20"
+          className={`text-3xl sm:text-4xl md:text-7xl transition-transform duration-1000 delay-100 ease-out ${
+            isVisible ? "translate-x-0 opacity-100" : "lg:translate-y-24 translate-y-8 opacity-20"
           }`}
         >
           <FaWordpress className="text-white" />
         </span>
         <span
-          className={`text-4xl md:text-7xl transition-transform duration-1000 delay-100 ease-out ${
-            isVisible ? "translate-x-0 opacity-100" : "translate-x-28 opacity-20"
+          className={`text-3xl sm:text-4xl md:text-7xl transition-transform duration-1000 delay-100 ease-out ${
+            isVisible ? "translate-x-0 opacity-100" : "lg:translate-x-24 translate-x-8 opacity-20"
           }`}
         >
           <FaNodeJs className="text-white" />
         </span>
         <span
-          className={`text-4xl md:text-7xl transition-transform duration-1000 delay-100 ease-out ${
-            isVisible ? "translate-x-0 opacity-100" : "translate-x-28 opacity-20"
+          className={`text-3xl sm:text-4xl md:text-7xl transition-transform duration-1000 delay-100 ease-out ${
+            isVisible ? "translate-x-0 opacity-100" : "lg:translate-x-24 translate-x-8 opacity-20"
           }`}
         >
           <FaSquareUpwork className="text-white" />
         </span>
       </div>
-      <div className="flex flex-col py-10 mt-20">
-        <h2 className="font-semibold text-6xl">WHAT WE OFFER!!</h2>
+
+      {/* OUR MISSION Section */}
+      <div className="flex flex-col justify-center items-center py-10 gap-4 md:mt-20 mt-5 w-full">
+        <h2
+          className={`font-semibold text-4xl md:text-6xl transition-transform duration-1000 ease-out ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+          }`}
+        >
+          OUR MISSION
+        </h2>
+        <p
+          className={`text-gray-300 text-xl md:text-2xl lg:text-4xl w-3/4 font-normal text-center md:w-1/2 md:leading-[1.6] transition-transform duration-1000 ease-out delay-300 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+          }`}
+        >
+          Helping <span>organizations</span> worldwide <span>achieve</span> extraordinary results through custom software <span>innovations</span>.
+        </p>
       </div>
     </div>
   );

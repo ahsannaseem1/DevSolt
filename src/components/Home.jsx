@@ -28,15 +28,16 @@ const Home = () => {
       {/* Overlay Content */}
       <div className="relative h-full flex justify-center items-end pr-8 ">
         <Reveal>
-          <div className="text-center flex flex-col justify-center items-center w-3/4 mx-auto text-white py-10 md:py-20">
+          <div className="text-center flex flex-col justify-center items-center w-3/4 mx-auto text-white py-10 lg:py-20">
             {/* Heading with initial delay and slow ease-out effect */}
             <h2
-              className={`text-3xl md:text-5xl font-bold mb-4 transition-transform duration-[1200ms] ease-out ${
+              className={`text-2xl sm:text-3xl md:text-5xl font-bold mb-4 transition-transform duration-[1200ms] ease-out w-full md:w-3/4 ${
                 isVisible ? "translate-y-0 opacity-100 delay-300" : "translate-y-20 opacity-0"
               }`}
             >
               Manifesting Your Dreams into Digital Reality.
             </h2>
+            <a href="#contact">
             <button
               className={`font-normal px-6 py-2 bg-black text-white font-semibold rounded-3xl hover:bg-blue-700 transition-transform duration-[1200ms] ease-out ${
                 isVisible ? "translate-y-0 opacity-100 delay-500" : "translate-y-20 opacity-0"
@@ -44,6 +45,7 @@ const Home = () => {
             >
               Get in Touch
             </button>
+            </a>
           </div>
         </Reveal>
       </div>

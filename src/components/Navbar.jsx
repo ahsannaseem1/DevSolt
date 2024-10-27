@@ -51,7 +51,7 @@ const Navbar = () => {
 
         <ul className="hidden md:flex gap-10 z-10 font-normal text-lg">
           <li className="h-full transition-transform duration-200 ease-out transform hover:scale-110 w-20 cursor-pointer hover:font-semibold">
-            <Link to="skills" smooth={true} offset={50} duration={500}>
+            <Link to="home" smooth={true} offset={50} duration={500}>
               Home
             </Link>
           </li>
@@ -61,7 +61,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="h-full transition-transform transform duration-200 ease-out hover:scale-110 w-20 cursor-pointer hover:font-semibold">
-            <Link to="contact" smooth={true} offset={50} duration={500}>
+            <Link to="services" smooth={true} offset={50} duration={500}>
               Services
             </Link>
           </li>
@@ -83,7 +83,7 @@ const Navbar = () => {
         >
           <ul className="font-semibold text-xl space-y-8 mt-24 text-center text-white">
             <li className="cursor-pointer">
-              <Link to="skills" onClick={closeNav} smooth={true} offset={50} duration={500}>
+              <Link to="home" onClick={closeNav} smooth={true} offset={50} duration={500}>
                 Home
               </Link>
             </li>
@@ -93,7 +93,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="cursor-pointer">
-              <Link to="portfolio" onClick={closeNav} smooth={true} offset={50} duration={500}>
+              <Link to="services" onClick={closeNav} smooth={true} offset={50} duration={500}>
                 Services
               </Link>
             </li>

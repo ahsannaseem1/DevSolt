@@ -1,7 +1,7 @@
 import React , {useEffect, useRef} from 'react'
 import { motion,useInView,useAnimation } from 'framer-motion'
 
-const Reveal = ({children, width='fit-content'}) => {
+const Reveal = ({children, width='100%'}) => {
 
     const ref = useRef(null)
     const isTnView = useInView(ref, {once:true}) 
