@@ -74,13 +74,14 @@ const Contact = () => {
                 <span className="text-xl h-full text-gray-800 bg-white p-2 rounded-full bg-opacity-700"><FaLocationDot /></span>
                 <div className="flex flex-col gap-2">
                   <h2 className="text-gray-100 font-semibold text-xl">Location</h2>
+                  <p className="text-gray-300 text-left font-normal text-lg">Michigan, USA</p>
                   <p className="text-gray-300 text-left font-normal text-lg">Pakistan</p>
                 </div>
               </div>
               <div className="flex justify-center items-center md:justify-start md:items-left pt-10 ml-4 gap-4">
                 <a href="https://www.linkedin.com/company/devsolt/" className="text-white p-2 text-lg rounded-full bg-zinc-800 cursor-pointer hover:scale-110 transition-transform" target="blank"><FaLinkedinIn /></a>
-                <a href="https://www.linkedin.com/company/devsolt/" className="text-white p-2 text-lg rounded-full bg-zinc-800 cursor-pointer hover:scale-110 transition-transform" target="blank"><FaInstagram /></a>
-                <a href="https://www.linkedin.com/company/devsolt/" className="text-white p-2 text-lg rounded-full bg-zinc-800 cursor-pointer hover:scale-110 transition-transform" target="blank"><FaFacebookF /></a>
+                <a href="https://www.instagram.com/devsolt.official?igsh=ZGo1ZHlzMHc3d3dm" className="text-white p-2 text-lg rounded-full bg-zinc-800 cursor-pointer hover:scale-110 transition-transform" target="blank"><FaInstagram /></a>
+                {/* <a href="https://www.linkedin.com/company/devsolt/" className="text-white p-2 text-lg rounded-full bg-zinc-800 cursor-pointer hover:scale-110 transition-transform" target="blank"><FaFacebookF /></a> */}
               </div>
             </div>
           </div>
