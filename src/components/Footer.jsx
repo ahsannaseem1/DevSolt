@@ -1,5 +1,5 @@
 import React from 'react'
-// import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+
 
 const Footer = () => {
   return (
@@ -7,9 +7,6 @@ const Footer = () => {
         <div className='space-y-4'>
             <h3 className='text-3xl text-gray-200 font-semibold text-center'>DevSolt</h3>
             <div className='flex flex-row gap-2 text-gray-400 text-2xl items-center justify-center' >
-                {/* <a href="https://github.com/ahsannaseem1" target='blank' className='hover:scale-150 transition-transform'><FaGithub/></a> */}
-                {/* <a href="https://www.instagram.com/ahsanzart" target='blank' className='hover:scale-150 transition-transform'><FaInstagram/></a> */}
-                {/* <a href="https://pk.linkedin.com/in/ahsan-naseem-779075253" target='blank' className='hover:scale-150 transition-transform'><FaLinkedinIn/></a> */}
                 <p className='text-sm'>Copyright 2024 - All Rights Reserved</p>
 
             </div>

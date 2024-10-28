@@ -12,7 +12,7 @@ const Home = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.3 } // Adjust threshold as needed
+      { threshold: 0.1 } // Adjust threshold as needed
     );
     if (sectionRef.current) {
       observer.observe(sectionRef.current);

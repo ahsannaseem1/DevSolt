@@ -11,7 +11,7 @@ const Services = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.5 } 
+      { threshold: 0.2 } 
     );
     if (servicesRef.current) {
       observer.observe(servicesRef.current);
